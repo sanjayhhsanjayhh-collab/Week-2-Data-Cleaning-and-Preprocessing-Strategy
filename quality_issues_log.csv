@@ -1,0 +1,13 @@
+Record_ID,Field,Issue,Action_or_Status
+R009,Observation_Date,Invalid or unparseable date,Retain with flag; exclude from time-series analysis until verified
+R010,Fertilizer_kg_ha,Non-numeric value,Set parsed value to missing; request source correction
+R004,Record,Repeated farm-date-crop-season key,Flag duplicate; retain in output for traceability; exclude from analytical copy after review
+R005,Reported_Yield_t_ha,Potential outlier (>20 t/ha demo threshold),"Review against crop, units and source; threshold is illustrative, not universal"
+R006,Crop,Missing category,Do not infer crop by mode; exclude from crop-specific analysis until resolved
+R008,Area_ha/Production_t,Logical inconsistency,Do not calculate yield; verify area and production source
+R010,Rainfall_mm,Outside physical domain,Set analytical rainfall to missing pending source correction; retain raw value in raw file
+R012,Rainfall_mm,Missing weather value,Filled by crop-season median for demonstration; replace with station data if available
+R007,Rainfall_mm,Missing/unresolved weather value,No valid crop-season median available; retrieve verified weather data or retain missing
+R010,Rainfall_mm,Missing/unresolved weather value,No valid crop-season median available; retrieve verified weather data or retain missing
+R002,Reported_Yield_t_ha,Source yield missing,Keep reported field missing; derive a separate yield only when valid area and production are available
+R016,Reported_Yield_t_ha,Source yield missing,Keep reported field missing; derive a separate yield only when valid area and production are available
